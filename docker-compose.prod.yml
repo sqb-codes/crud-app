@@ -1,0 +1,14 @@
+# This file will contain properties for prod environment
+version: '3'
+services:
+  nginx:
+    ports:
+      - "80:80"
+  node-app:
+    build: 
+      context: .
+      args:
+        - NODE_ENV=production
+    environment:
+      - NODE_ENV=production
+    command: node app.js
