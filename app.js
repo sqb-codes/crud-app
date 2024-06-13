@@ -30,6 +30,7 @@ const mongoConnection = () => mongoose.connect(
 // to handle json
 app.use(express.json());
 
+// print hello world on home page
 app.get("/", (req, res) => {
     res.send("<h1>Hello World Using Node + Mongo + Docker Compose</h1>");
 });
