@@ -22,7 +22,6 @@ const mongoConnection = () => mongoose.connect(
     .then(() => console.log("Successfully connected to DB"))
     .catch((e) => {
         console.log("Error :",e);
-        // so it will try to reconnect after every 5 seconds (but still this is not best practice)
         setTimeout(mongoConnection, 5000);
     });
 
