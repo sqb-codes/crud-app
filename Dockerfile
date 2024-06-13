@@ -14,6 +14,7 @@ RUN if [ "$NODE_ENV" = "development" ]; \
 
 COPY . /app
 
+# Command to run npm install on Docker
 RUN npm install
 
 ENV PORT 3000
